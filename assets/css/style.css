@@ -1,0 +1,107 @@
+/* =========================
+   GLOBAL STYLE
+========================= */
+body{
+    margin-top: 50px;
+    background: linear-gradient(135deg,#eef2ff,#dbeafe);
+    min-height:100vh;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* =========================
+   CARD STYLE
+========================= */
+.card{
+    border:none;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+/* =========================
+   TITLE & TEXT
+========================= */
+h1{
+    font-weight:700;
+    color:#1e293b;
+}
+
+p{
+    color:#64748b;
+}
+
+/* =========================
+   ICON
+========================= */
+.hero-icon{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+/* =========================
+   INPUT FILE
+========================= */
+input[type="file"]{
+    border-radius:12px;
+    padding:10px;
+    border:1px solid #cbd5f5;
+    transition:0.3s;
+}
+
+input[type="file"]:hover{
+    border-color:#6366f1;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn-primary{
+    background: linear-gradient(135deg,#6366f1,#4f46e5);
+    border:none;
+    border-radius:12px;
+    font-weight:600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover{
+    background: linear-gradient(135deg,#4f46e5,#4338ca);
+    transform: scale(1.03);
+    box-shadow:0 10px 25px rgba(79,70,229,0.4);
+}
+
+/* =========================
+   ALERT BOX
+========================= */
+.alert{
+    border-radius:15px;
+    font-size:14px;
+}
+
+/* =========================
+   MODAL
+========================= */
+.modal-content{
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+/* =========================
+   SCROLLBAR (opsional modern)
+========================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a5b4fc;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6366f1;
+}
