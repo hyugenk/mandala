@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mandala</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="/assets/img/logo-mandala.jpeg" rel="icon">
+  <link href="/assets/img/logo-mandala.jpeg" rel="sipadi icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="/assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{{ url_for('index') }}" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="/assets/img/logo-mandala_v2.jpeg" alt="">
+        <!-- <h1 class="sitename">MANDALA</h1>
+        <span>.</span> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#services">Service</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarteds logo d-flex align-items-center me-auto me-lg-0" href="#">
+        <img src="/assets/img/logo-imigrasi.png" alt="Logo Imigrasi" class="logo-img">
+        <img src="/assets/img/logo-kemenipas.png" alt="Logo Kedua" class="logo-img ms-2">
+      </a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <!-- ✅ Background (pakai class khusus) -->
+      <img src="/assets/img/bg-mandala.JPG" alt="Background" class="hero-bg">
+
+      <div class="container">
+        <div class="row align-items-center" data-aos="fade-up" data-aos-delay="100">
+
+          <!-- ✅ Kiri -->
+          <div class="col-xl-6 col-lg-8 text-start">
+
+            <img src="/assets/img/mandala-bg.png" alt="Logo Mandala" class="hero-logo">
+
+            <p class="hero-text">
+              Manajemen Data Izin Tinggal & Status Keimigrasian
+            </p>
+
+            <a class="btn-getstarted" href="#services" style="margin-left: auto; padding: 14px 35px; font-size: 18px; font-weight: bold; color: #F2E1C4 ;">
+              Get Started
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>our Services</p>
+
+        <p class="mt-3 text-mandala">
+          <b>MANDALA – Manajemen Data Izin Tinggal & Status Keimigrasian</b> is a web-based platform developed to support the management, filtering, and processing of immigration data in the Residence Permit and Immigration Status Section at Surakarta Immigration Office. This website is designed to improve administrative efficiency and data organization through integrated features such as Application by Domicile, Children with Dual Citizenship Data Recap, and Guarantor Data Merger. 
+        </p>
+
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-map-fill"></i>
+              </div>
+              <a href="/rekap_kabupaten" target="_blank" class="stretched-link">
+                <h3>APPLICATION BY DOMICILE</h3>
+              </a>
+              <p>Applications grouping according to working area, which as well includes final calculation of applicants' gender</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-clipboard-check-fill"></i>
+              </div>
+              <a href="rekap" target="_blank" class="stretched-link">
+                <h3>CHILDREN WITH DUAL CITIZENSHIP DATA RECAP</h3>
+              </a>
+              <p>
+                A comprehensive data recap of dual-citizen children, including complete information to ensure the data is well-structured and easily processed for long term use
+              </p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-person-vcard-fill"></i>
+              </div>
+              <a href="mergerdatapenjamin" target="_blank" class="stretched-link">
+                <h3>GUARANTOR DATA MERGER</h3>
+              </a>
+              <p>An advanced feature to merge Dual Citizenship data recap with the guarantors' phone numbers, allowing both datasets to be fully integrated</p>
+            </div>
+          </div><!-- End Service Item -->
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Team</h2>
+        <p>our Team</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="/assets/img/team/hyuga.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.instagram.com/hyuga_dk" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Hyuga Dewanto Kojyro</h4>
+                <span>Project Manager</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="/assets/img/team/rania.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.instagram.com/rnfdla" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Rania Fadilla</h4>
+                <span>Project Officer</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="/assets/img/team/cinta.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.instagram.com/cintaswp" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Cinta Swannowsky Prasetyo</h4>
+                <span>Designer</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="/assets/img/team/ratrina.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.instagram.com/ratrina.__" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Ratrina Panaitan</h4>
+                <span>Editor</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Contact Us</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+          <iframe style="border:0; width: 100%; height: 270px;"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d988.8214562024654!2d110.77199624666969!3d-7.543776117708953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a14635746f5d7%3A0x6d47a03ee145b70b!2sKantor%20Imigrasi%20Kelas%20I%20TPI%20Surakarta!5e0!3m2!1sid!2sid!4v1777445883650!5m2!1sid!2sid"
+            frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div><!-- End Google Maps -->
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>Jl. Adi Sucipto No.8, Blukukan, Kec. Colomadu, Karanganyar</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>085117259024</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>kanim_surakarta@imigrasi.go.id</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+
+
+
+    <div class="copyright">
+      <div class="container text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">MANDALA</strong> <span>All Rights Reserved</span></p>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">MANDALA</a> | <a
+            href="https://bootstrapmade.com/tools/">DevTools</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

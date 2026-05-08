@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Merge Data Penjamin</title>
+      <!-- Favicons -->
+    <link href="/assets/img/logo-mandala.jpeg" rel="icon">
+    <link href="/assets/img/logo-mandala.jpeg" rel="sipadi icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="/assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="/" class="logo d-flex align-items-center me-auto me-lg-0">
+                <img src="/assets/img/logo-mandala_v2.jpeg" alt="">
+                <h1 class="sitename">MANDALA</h1>
+                <span>.</span>
+            </a>
+            <a class="btn-getstarted" href="/">Back</a>
+        </div>
+    </header>
+
+    <div class="container py-5" style="margin-top: 80px;">
+
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+
+                <div class="card p-5">
+
+                    <div class="text-center mb-4">
+                        <h1 class="fw-bold">📋 GUARANTOR DATA MERGER</h1>
+                        <p class="text-muted">This feature is used to search for and merge the sponsor’s phone numbers into the registration data, then automatically generate a single integrated recap file.
+
+                        </p>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <b>📌 Terms and Conditions :</b>
+                        <ul class="mb-0 mt-2">
+                            <li>Use excel file <b>.xls / .xlsx</b></li>
+                            <li>Make sure it contains : <b>NAMA PENJAMIN, NO HP</b></li>
+                        </ul>
+                    </div>
+
+                    <form id="formMerge">
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">File Register</label>
+                            <input type="file" name="file_utama" class="form-control" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">File Data Penjamin</label>
+                            <input type="file" name="file_penjamin" class="form-control" required>
+                        </div>
+
+                        <button class="btn btn-primary btn-lg w-100">
+                            🚀 Process
+                        </button>
+                    </form>
+
+                    <div id="loading" class="text-center mt-3" style="display:none;">
+                        <div class="spinner-border text-primary" role="status"></div>
+                        <p class="mt-2 text-primary fw-bold">Sedang memproses data...</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="previewModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">📊 Preview Hasil Merge</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="tablePreview" class="table-responsive"></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/download_file" class="btn btn-success">
+                        ⬇️ Download Excel
+                    </a>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    document.getElementById("formMerge").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let formData = new FormData(this);
+        document.getElementById("loading").style.display = "block";
+
+        fetch("/process", {
+                method: "POST",
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("loading").style.display = "none";
+
+                if (data.status === "success") {
+                    document.getElementById("tablePreview").innerHTML = data.table;
+                    let modal = new bootstrap.Modal(document.getElementById("previewModal"));
+                    modal.show();
+                } else {
+                    alert("Error: " + data.message);
+                }
+            })
+            .catch(err => {
+                document.getElementById("loading").style.display = "none";
+                alert("Terjadi error pada server");
+            });
+    });
+    </script>
+
+</body>
+
+</html>
