@@ -106,7 +106,7 @@ def process():
         # =========================
         output_file = os.path.join(
             UPLOAD_FOLDER,
-            "hasil_merger_data_penjamin.xlsx"
+            "Result_GDM.xlsx"
         )
 
         file_output_global = output_file
@@ -206,7 +206,7 @@ def process_rekap():
         # =========================
         output_file = os.path.join(
             UPLOAD_FOLDER,
-            "hasil_rekap.xlsx"
+            "Result_Recap ABG.xlsx"
         )
 
         file_output_global = output_file
@@ -308,7 +308,7 @@ def process_kabupaten():
         # =========================
         # SIMPAN MULTI SHEET
         # =========================
-        output_file = os.path.join(UPLOAD_FOLDER, "rekap_kabupaten.xlsx")
+        output_file = os.path.join(UPLOAD_FOLDER, "Result_Grouping.xlsx")
         file_output_global = output_file
 
         with pd.ExcelWriter(output_file, engine="openpyxl") as writer:
