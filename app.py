@@ -106,7 +106,7 @@ def process():
         # =========================
         output_file = os.path.join(
             UPLOAD_FOLDER,
-            "Result_GDM.xlsx"
+            "Result_Merger.xlsx"
         )
 
         file_output_global = output_file
